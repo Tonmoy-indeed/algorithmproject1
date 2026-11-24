@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="680.0" maxWidth="978.0" minHeight="680.0" minWidth="978.0" prefHeight="680.0" prefWidth="978.0" style="-fx-background-color: teal; -fx-border-color: black;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.algoproject.PrimaryController">
+   <children>
+      <Label fx:id="mainLabel" alignment="CENTER" layoutX="118.0" layoutY="47.0" prefHeight="59.0" prefWidth="548.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 4;" text="Minimum Spanning Tree Finder" textFill="WHITE" AnchorPane.bottomAnchor="577.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="47.0">
+         <font>
+            <Font name="Times New Roman Bold" size="36.0" />
+         </font>
+      </Label>
+      <Pane fx:id="graphPane" layoutX="33.0" layoutY="127.0" maxHeight="518.0" maxWidth="715.0" minHeight="450.0" minWidth="715.0" prefHeight="518.0" prefWidth="715.0" style="-fx-border-color: black; -fx-border-width: 5; -fx-background-color: white;">
+         <children>
+            <Label fx:id="backgroundLabel" alignment="CENTER" layoutX="261.0" layoutY="28.0" opacity="0.5" text="Enter Nodes Here">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+            </Label>
+            <StackPane fx:id="node1" layoutX="197.0" layoutY="188.0" style="-fx-background-color: none;">
+               <children>
+                  <Circle fx:id="circle1" fill="TEAL" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" style="border: border;" />
+                  <Label fx:id="label1" text="1">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane fx:id="node2" layoutX="459.0" layoutY="188.0" style="-fx-background-color: none;">
+               <children>
+                  <Circle fx:id="circle2" fill="TEAL" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="5.0" />
+                  <Label fx:id="label2" text="2">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+         </children>
+      </Pane>
+      <VBox layoutX="777.0" layoutY="420.0" prefHeight="131.0" prefWidth="169.0" spacing="5.0">
+         <children>
+            <Button fx:id="addButton1" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: lightgray;" text="CALCULATE MST" textAlignment="CENTER">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#handleaddButton" prefHeight="35.0" prefWidth="190.0" style="-fx-background-color: lightgray;" text="Add A Node" textAlignment="CENTER">
+               <font>
+                  <Font name="Cambria Math" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="removeButton" mnemonicParsing="false" onAction="#handleremoveButton" prefHeight="37.0" prefWidth="175.0" style="-fx-background-color: lightgray;" text="Remove Node" textAlignment="CENTER">
+               <font>
+                  <Font name="Cambria Math" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="removeButton1" mnemonicParsing="false" onAction="#handleremoveButton" prefHeight="37.0" prefWidth="175.0" style="-fx-background-color: lightgray;" text="Clear" textAlignment="CENTER">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TextArea layoutX="777.0" layoutY="140.0" prefHeight="200.0" prefWidth="169.0" promptText="MST WEIGHT WILL SHOW HERE" style="-fx-background-color: gray;" wrapText="true" />
+   </children>
+</AnchorPane>
